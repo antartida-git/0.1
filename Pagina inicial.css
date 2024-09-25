@@ -1,0 +1,67 @@
+#Titulo {
+  color: #2288cc;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.644);
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  position: fixed; /* Apenas fixed, sem position: absolute */
+  top: 320px;
+  left: 35px;
+  border-radius: 5px;
+  z-index: 1001; /* Garante que fique acima do vídeo */
+}
+
+#Subtitulo {
+  color: white;
+  font-weight: 600;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.623);
+  font-family: "Poppins", sans-serif;
+  position: fixed;
+  top: 360px;
+  left: 35px;
+  z-index: 1001; /* Garante que fique acima do vídeo */
+}
+
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  z-index: 1001; /* Garante que os links fiquem acima do vídeo */
+}
+
+a:visited {
+  color: rgb(255, 255, 255);
+}
+
+.botao-home {
+  text-decoration: underline;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.623);
+  position: fixed;
+  font-weight: 10;
+  bottom: 580px;
+  left: 35px;
+  border-radius: 5px;
+  font-size: 25px;
+  z-index: 1001;
+}
+
+.Arquivos {
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.623);
+  position: fixed;
+  font-weight: 10;
+  bottom: 580px;
+  left: 940px;
+  border-radius: 5px;
+  font-size: 25px;
+  z-index: 1001;
+}
+
+.Linha-do-tempo {
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.623);
+  position: fixed;
+  font-weight: 10;
+  bottom: 580px;
+  left: 1100px;
+  border-radius: 5px;
+  font-size: 25px;
+  z-index: 1001;
+}

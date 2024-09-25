@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="stylesheet" href="Pagina inicial.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S.O.S Antártica</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        overflow: hidden;
+      }
+
+      .Video-fundo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <video class="Video-fundo" autoplay loop muted playsinline>
+      <source src="0.1/src/video/Tela-inicial.mp4" type="video/mp4" />
+      Seu navegador não suporta a tag de vídeo.
+    </video>
+
+    <div class="header">
+      <h1 id="Titulo">Antártica</h1>
+      <h2 id="Subtitulo">Por um futuro melhor</h2>
+    </div>
+
+    <a href="Pagina inicial.html" class="botao-home">Home</a>
+    <a href="Pagina inicial.html" class="Arquivos">Arquivos</a>
+    <a href="Pagina inicial.html" class="Linha-do-tempo">Linha do tempo</a>
+  </body>
+</html>
