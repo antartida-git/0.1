@@ -203,3 +203,69 @@ a:visited {
 .dropbtn:hover .menu-icon {
   transform: scale(1.1);
 }
+.segunda-tela {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+  text-align: center;
+  margin-top: 0;
+  transition: background-image 1s ease-in-out;
+  background-attachment: local;
+  background-image: url("src/img/GOSTEI 3.jpg");
+}
+#Titulo-segun {
+  color: rgb(34, 136, 204);
+  font-family: "Arctic", sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+  position: absolute;
+  top: 800px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  transition: all 0.3s ease;
+  z-index: 1001;
+}
+
+#Titulo-segun:hover {
+  color: rgb(255, 255, 255);
+
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+#Botao-ajuda {
+  position: absolute;
+  top: 1050px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(34, 136, 204, 0.8);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  z-index: 1002;
+}
+
+#Botao-ajuda:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: rgb(34, 136, 204);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+#Botao-ajuda:active {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

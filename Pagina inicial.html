@@ -32,7 +32,7 @@
       <!-- Botão menu -->
       <div
         class="dropdown"
-        style="position: absolute; bottom: 580px; left: 1280px"
+        style="position: fixed; bottom: 580px; left: 1260px"
       >
         <button class="dropbtn">
           <img src="src/img/Icone-menu.png" alt="Menu" class="menu-icon" />
@@ -61,5 +61,21 @@
         </div>
       </div>
     </div>
+    <section class="segunda-tela">
+      <h1 id="Titulo-segun">O continente precisa da sua ajuda.</h2>
+        <button id="Botao-ajuda">Como posso ajudar?</button>
+
+
+      <script>
+        window.addEventListener("scroll", function () {
+          const titulo = document.getElementById("Titulo");
+          const subtitulo = document.getElementById("Subtitulo");
+          const opacityValue = 1 - window.scrollY / window.innerHeight;
+
+          titulo.style.opacity = opacityValue;
+          subtitulo.style.opacity = opacityValue;
+        });
+      </script>
+    </section>
   </body>
 </html>
