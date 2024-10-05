@@ -3,44 +3,63 @@
   <head>
     <link rel="stylesheet" href="Pagina inicial.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
       rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>S.O.S Antártica</title>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: "Poppins", sans-serif;
-        overflow: hidden;
-      }
-
-      .Video-fundo {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-        z-index: -1;
-      }
-    </style>
   </head>
+  <!-- Parte inicial do código contendo o background -->
   <body>
-    <video class="Video-fundo" autoplay loop muted playsinline>
-      <source src="0.1/src/video/Tela-inicial.mp4" type="video/mp4" />
-      Seu navegador não suporta a tag de vídeo.
-    </video>
+    <div class="primeira-tela">
+      <video class="Video-fundo" autoplay loop muted playsinline>
+        <source src="src/video/Tela-inicial.mp4" type="video/mp4" />
+      </video>
+      <!-- Parte do titulo,subtitulo e botão home -->
+      <div class="header">
+        <h1 id="Titulo">Antártica</h1>
+        <h2 id="Subtitulo">Por um futuro melhor</h2>
+      </div>
 
-    <div class="header">
-      <h1 id="Titulo">Antártica</h1>
-      <h2 id="Subtitulo">Por um futuro melhor</h2>
+      <a href="Pagina inicial.html">
+        <img src="src/img/Logo 2.png" alt="Home" class="botao-home" />
+      </a>
+
+      <!-- Botão menu -->
+      <div
+        class="dropdown"
+        style="position: absolute; bottom: 580px; left: 1280px"
+      >
+        <button class="dropbtn">
+          <img src="src/img/Icone-menu.png" alt="Menu" class="menu-icon" />
+        </button>
+        <div class="dropdown-content">
+          <a href="Pagina inicial.html">
+            <img src="src/img/Icone-arquivo2.png" alt="Artigos" class="icon" />
+            Artigos
+          </a>
+          <a href="Pagina inicial.html">
+            <img
+              src="src/img/Icone-linha2.png"
+              alt="Linha do Tempo"
+              class="icon"
+            />
+            Linha do tempo
+          </a>
+          <a href="Pagina inicial.html">
+            <img src="src/img/botao-especie.png" alt="Espécies" class="icon" />
+            Espécies
+          </a>
+          <a href="Pagina inicial.html">
+            <img src="src/img/icone-clima.png" alt="Clima" class="icon" />
+            Clima
+          </a>
+        </div>
+      </div>
     </div>
-
-    <a href="Pagina inicial.html" class="botao-home">Home</a>
-    <a href="Pagina inicial.html" class="Arquivos">Arquivos</a>
-    <a href="Pagina inicial.html" class="Linha-do-tempo">Linha do tempo</a>
   </body>
 </html>
