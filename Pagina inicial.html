@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S.O.S Antártica</title>
     <link rel="stylesheet" href="Pagina inicial.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
@@ -8,41 +11,44 @@
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
     />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>S.O.S Antártica</title>
   </head>
-  <!-- Parte inicial do código contendo o background -->
   <body>
-    <div class="primeira-tela">
-      <video class="Video-fundo" autoplay loop muted playsinline>
+    <!-- Seção inicial com o vídeo de fundo -->
+    <header class="primeira-tela">
+      <video class="video-fundo" autoplay loop muted playsinline>
         <source src="src/video/Tela-inicial.mp4" type="video/mp4" />
       </video>
-      <!-- Parte do titulo,subtitulo e botão home -->
-      <div class="header">
+
+      <!-- Título e subtítulo -->
+      <div class="header-text">
         <h1 id="Titulo">Antártica</h1>
         <h2 id="Subtitulo">Por um futuro melhor</h2>
       </div>
 
-      <a href="Pagina inicial.html">
-        <img src="src/img/Logo 2.png" alt="Home" class="botao-home" />
-      </a>
+      <!-- Link para a página inicial através do logo -->
+      <nav aria-label="Home">
+        <a href="Pagina inicial.html">
+          <img src="src/img/Logo 2.png" alt="Home" class="botao-home" />
+        </a>
+      </nav>
 
-      <!-- Botão menu -->
-      <div
+      <!-- Menu dropdown de navegação -->
+      <nav
         class="dropdown"
         style="position: fixed; bottom: 580px; left: 1260px"
+        aria-label="Menu"
       >
-        <button class="dropbtn">
+        <button class="dropbtn" aria-haspopup="true" aria-expanded="false">
           <img src="src/img/Icone-menu.png" alt="Menu" class="menu-icon" />
         </button>
-        <div class="dropdown-content">
-          <a href="Pagina inicial.html">
+        <div class="dropdown-content" role="menu">
+          <a href="Pagina inicial.html" role="menuitem">
             <img src="src/img/Icone-arquivo2.png" alt="Artigos" class="icon" />
             Artigos
           </a>
-          <a href="Pagina inicial.html">
+          <a href="Pagina inicial.html" role="menuitem">
             <img
               src="src/img/Icone-linha2.png"
               alt="Linha do Tempo"
@@ -50,32 +56,34 @@
             />
             Linha do tempo
           </a>
-          <a href="Pagina inicial.html">
+          <a href="Pagina inicial.html" role="menuitem">
             <img src="src/img/botao-especie.png" alt="Espécies" class="icon" />
             Espécies
           </a>
-          <a href="Pagina inicial.html">
+          <a href="Pagina inicial.html" role="menuitem">
             <img src="src/img/icone-clima.png" alt="Clima" class="icon" />
             Clima
           </a>
         </div>
-      </div>
-    </div>
+      </nav>
+    </header>
+
+    <!-- Seção de conteúdo secundário -->
     <section class="segunda-tela">
-      <h1 id="Titulo-segun">O continente precisa da sua ajuda.</h2>
-        <button id="Botao-ajuda">Como posso ajudar?</button>
-
-
-      <script>
-        window.addEventListener("scroll", function () {
-          const titulo = document.getElementById("Titulo");
-          const subtitulo = document.getElementById("Subtitulo");
-          const opacityValue = 1 - window.scrollY / window.innerHeight;
-
-          titulo.style.opacity = opacityValue;
-          subtitulo.style.opacity = opacityValue;
-        });
-      </script>
+      <h1 id="Titulo-segun">O continente precisa da sua ajuda.</h1>
+      <button id="Botao-ajuda" type="button">Como posso ajudar?</button>
     </section>
+
+    <!-- Script para animação de opacidade no scroll -->
+    <script>
+      window.addEventListener("scroll", function () {
+        const titulo = document.getElementById("Titulo");
+        const subtitulo = document.getElementById("Subtitulo");
+        const opacityValue = 1 - window.scrollY / window.innerHeight;
+
+        titulo.style.opacity = opacityValue;
+        subtitulo.style.opacity = opacityValue;
+      });
+    </script>
   </body>
 </html>
