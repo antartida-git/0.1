@@ -1,0 +1,71 @@
+h2{
+    font-size: 48px;
+    text-align: center;
+}
+
+.text{
+    font-size: 24px;
+    text-align: justify;
+    .disable-select {
+        -webkit-user-select: none;  
+        -moz-user-select: none;    
+        -ms-user-select: none;      
+        user-select: none;
+    }
+}
+
+.container{
+    width: 1280px;
+    height: 350px;
+    display: grid;
+    grid-template-columns: [main-img] 400px [main-text] 600px;
+    place-items: center;
+    .image1{
+        width: 300px;
+        height: 300px;
+        background-image: url("src/img/causas/grafico.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .image2{
+        width: 300px;
+        height: 300px;
+        background-color: red;
+    }
+    .image3{
+        width: 300px;
+        height: 300px;
+        background-color: red;
+    }
+
+    .image4{
+        width: 300px;
+        height: 300px;
+        background-image: url("src/img/causas/mapa.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+
+section{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow: hidden;
+    place-content: start;
+    
+}
+
+main{
+    width: 1280px;
+    height: 720px;
+    display: grid;
+    align-items: center;
+    gap: 150px;
+}
+
+body{
+    display: grid;
+    place-items: center;
+}
