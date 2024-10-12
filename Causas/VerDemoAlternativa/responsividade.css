@@ -1,0 +1,32 @@
+@media (max-width: 760px) {
+    body{
+        width: 100vw;
+        height: 90vh;
+        main{
+            section{
+                .topicos{
+                    display: block;
+                    background-color: transparent;
+                    div{
+                        position: relative;
+                        p{
+                            position: absolute;
+                            top: 10vh;
+                            left: 40px;
+                            color: #000;
+                            &:hover{
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+                .teste{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    place-items: center;
+                }
+            }
+        }
+
+    }
+}
