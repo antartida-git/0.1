@@ -8,8 +8,8 @@ Isso existe para demonstrar a situação atual da página de 'Causas', e o que a
 - [x] Dev. Layout(Alternativa)
     - [ ] Mobile
 - [ ] Adição de comentérios ao código 
-    - [ ] HTML
-    - [ ] CSS
+    - [x] HTML
+    - [x] CSS
     - [x] JS
 - [ ] Executar scripts diferentes dependendo do dispositivo
 
