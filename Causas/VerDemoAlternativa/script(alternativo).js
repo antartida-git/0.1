@@ -1,10 +1,15 @@
+//Seleciona class no HTML
 const controles = document.getElementsByClassName("controle");
+//nota!: Testes de quadrados colorido. Mudar depois.
 const testes = document.getElementsByClassName("teste");
+
+const assuntos = document.querySelectorAll(".assunto");
+const scroll = document.querySelector(".scroll");
 
 // Variável para armazenar o último índice visível
 let ultimoVisivelIndex = 0;
 
-// Inicializa o primeiro elemento como visível
+// Inicializa o primeiro elemento como visível com estilização
 testes[ultimoVisivelIndex].classList.add('visivel');
 controles[ultimoVisivelIndex].classList.add('ativo');
 
@@ -28,5 +33,5 @@ for (let i = 0; i < controles.length; i++) {
 controles[controles.length - 1].addEventListener("mouseleave", function() {
     // Mantém o último elemento visível
     testes[ultimoVisivelIndex].classList.add('visivel');
-    controles[ultimoVisivelIndex].classList.add('ativo')
+    controles[ultimoVisivelIndex].classList.add('ativo');
 });
