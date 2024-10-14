@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style(Alternativa).css">
     <script src="script(alternativo).js" defer></script>
+    <script src="scrollDesktop.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
     <title>Causas</title>
 </head>
 <body>
@@ -15,91 +18,11 @@
             Seção 1: "Por que isso está acontecendo?" Revolução Industrial e Clima, Perda de Gelo Polar, Aquecimento Global Irreversível
             Seção 2: "Consequências", Aquecimento Acima de 1,5°C, Surto de Antraz na Sibéria, Vírus Zumbis no Permafrost -->
             <!--Nota!: Caso queira alterar algo, ou mudar o nome da classe lembrar de alterar CSS.-->
-        <section class="cena">
-            <article class="assunto">
-            <!--Teste é a tela que vai apresentar dependendo do controlador. Todos tem um número que eu usava nos testes de exibição,
-                mas agora é só organização se quiser é só tirar e alterar o CSS(da pra economizar uns ms de load).-->
-                <div class="teste 1">
-                    <!--"Reserva" precisa preferencialmente estar vazia-->
-                    <div class="reserva"></div>
-                    <!--Colocar conteúdo -->
-                    <div class="mainTexto">
-                        <img src="/src/img/Causas/grafico.png" alt="grafico">
-                        <p class="text">
-                            O problema começou com a revolução industrial, quando nós, como espécie, passamos a ter influência no clima, 
-                            porque passamos a ser importantes emissores de gases de efeito estufa", explica Lucas Ruiz, geólogo do Instituto 
-                            Argentino de Nivologia, Glaciologia e Ciências Ambientais (Ianigla) — nivologia é o estudo da neve e glaciologia, 
-                            o das geleiras.
-                        </p>
-                    </div>
-                </div>
-                <div class="teste 2">
-                    <div class="reserva"></div>
-                    <div class="mainTexto">
-                        <img src="/src/img/Causas/Lucas-Ruiz.png" alt="grafico">
-                        <p class="text">
-                            À medida que o planeta se aquece, as zonas polares perdem a superfície branca, que reflete menos, o que produz um aumento na temperatura, 
-                            que por sua vez gera mais perda de gelo. Esse fenômeno é o que explica porque os polos estão se aquecendo de duas a três vezes mais que o 
-                            resto do planeta, diz Costa, do Instituto Antártico Argentino.
-                        </p>
-                    </div>
-                </div>
-                <div class="teste 3">
-                    <div class="reserva"></div>
-                    <div class="mainTexto">
-                        <img src="/src/img/Causas/paisagem.png" alt="grafico">
-                        <p class="text">
-                            À medida que o planeta se aquece, as zonas polares perdem a superfície branca, que reflete menos, o que produz um aumento na temperatura, 
-                            que por sua vez gera mais perda de gelo. Esse fenômeno é o que explica porque os polos estão se aquecendo de duas a três vezes mais que o 
-                            resto do planeta, diz Costa, do Instituto Antártico Argentino.
-                        </p>
-                    </div>
-                </div>
-                <div class="teste 4">
-                    <div class="reserva"></div>
-                    <div class="mainTexto">
-                        <img src="/src/img/Causas/globo.png" alt="grafico">
-                        <p class="text">
-                            À medida que o planeta se aquece, as zonas polares perdem a superfície branca, que reflete menos, o que produz um aumento na temperatura, 
-                            que por sua vez gera mais perda de gelo. Esse fenômeno é o que explica porque os polos estão se aquecendo de duas a três vezes mais que o 
-                            resto do planeta, diz Costa, do Instituto Antártico Argentino.
-                        </p>
-                    </div>
-                </div>
-                <div class="teste 5">
-                    <div class="reserva"></div>
-                    <div class="mainTexto">
-                        <img src="/src/img/Causas/abominavel homem das neves.png" alt="grafico">
-                        <p class="text">
-                            À medida que o planeta se aquece, as zonas polares perdem a superfície branca, que reflete menos, o que produz um aumento na temperatura, 
-                            que por sua vez gera mais perda de gelo. Esse fenômeno é o que explica porque os polos estão se aquecendo de duas a três vezes mais que o 
-                            resto do planeta, diz Costa, do Instituto Antártico Argentino.
-                        </p>
-                    </div>
-                </div>
-                <div class="teste 6">
-                    <div class="reserva"></div>
-                    <div class="mainTexto">
-                        <img src="/src/img/Causas/habitat do cucabeludo.png" alt="grafico">
-                        <p class="text">
-                            À medida que o planeta se aquece, as zonas polares perdem a superfície branca, que reflete menos, o que produz um aumento na temperatura, 
-                            que por sua vez gera mais perda de gelo. Esse fenômeno é o que explica porque os polos estão se aquecendo de duas a três vezes mais que o 
-                            resto do planeta, diz Costa, do Instituto Antártico Argentino.
-                        </p>
-                    </div>
-                </div>
-            </article>
+        <section class="Layout">
             <!--Cabeçalho e controles-->
             <article class="topicos">
-                <header>
-                    <img src="/src/img/Logo 2.png" alt="Home" class="botao-home" />
-                    <ul>
-                        <li class="after"><a href="">Arquivos</a></li>
-                        <li><a href="">Linha do tempo</a></li>
-                    </ul>
-                </header>
                 <!--Coleção de controles-->
-                <div>
+                <div class="controles">
                     <p class="controle">
                         Revolução Industrial e Clima<span>Por que ocorre isso?</span>
                     </p>
@@ -120,7 +43,80 @@
                     </p>
                 </div>
             </article>
+            <article class="assunto" id="scrollableDiv">
+            <!--Teste é a tela que vai apresentar dependendo do controlador. Todos tem um número que eu usava nos testes de exibição,
+                mas agora é só organização se quiser é só tirar e alterar o CSS(da pra economizar uns ms de load).-->
+                <div class="teste 1">
+                    <!--"Reserva" precisa preferencialmente estar vazia-->
+                    <!--Colocar conteúdo -->
+                    <div class="mainTexto">
+                        <img src="/src/img/Causas/grafico.png" alt="grafico">
+                        <p class="text">
+                            O problema começou com a revolução industrial, quando nós, como espécie, passamos a ter influência no clima, 
+                            porque passamos a ser importantes emissores de gases de efeito estufa", explica Lucas Ruiz, geólogo do Instituto 
+                            Argentino de Nivologia, Glaciologia e Ciências Ambientais (Ianigla) — nivologia é o estudo da neve e glaciologia, 
+                            o das geleiras.
+                        </p>
+                    </div>
+                </div>
+                <div class="teste 2">
+                    
+                    <div class="mainTexto">
+                        <img src="/src/img/Causas/Lucas-Ruiz.png" alt="grafico">
+                        <p class="text">
+                            À medida que o planeta se aquece, as zonas polares perdem a superfície branca, que reflete menos, o que produz um aumento na temperatura, 
+                            que por sua vez gera mais perda de gelo. Esse fenômeno é o que explica porque os polos estão se aquecendo de duas a três vezes mais que o 
+                            resto do planeta, diz Costa, do Instituto Antártico Argentino.
+                        </p>
+                    </div>
+                </div>
+                <div class="teste 3">
+                    
+                    <div class="mainTexto">
+                        <img src="/src/img/Causas/paisagem.png" alt="grafico">
+                        <p class="text">
+                            À medida que o planeta se aquece, as zonas polares perdem a superfície branca, que reflete menos, o que produz um aumento na temperatura, 
+                            que por sua vez gera mais perda de gelo. Esse fenômeno é o que explica porque os polos estão se aquecendo de duas a três vezes mais que o 
+                            resto do planeta, diz Costa, do Instituto Antártico Argentino.
+                        </p>
+                    </div>
+                </div>
+                <div class="teste 4">
+                    
+                    <div class="mainTexto">
+                        <img src="/src/img/Causas/globo.png" alt="grafico">
+                        <p class="text">
+                            À medida que o planeta se aquece, as zonas polares perdem a superfície branca, que reflete menos, o que produz um aumento na temperatura, 
+                            que por sua vez gera mais perda de gelo. Esse fenômeno é o que explica porque os polos estão se aquecendo de duas a três vezes mais que o 
+                            resto do planeta, diz Costa, do Instituto Antártico Argentino.
+                        </p>
+                    </div>
+                </div>
+                <div class="teste 5">
+                    
+                    <div class="mainTexto">
+                        <img src="/src/img/Causas/abominavel homem das neves.png" alt="grafico">
+                        <p class="text">
+                            À medida que o planeta se aquece, as zonas polares perdem a superfície branca, que reflete menos, o que produz um aumento na temperatura, 
+                            que por sua vez gera mais perda de gelo. Esse fenômeno é o que explica porque os polos estão se aquecendo de duas a três vezes mais que o 
+                            resto do planeta, diz Costa, do Instituto Antártico Argentino.
+                        </p>
+                    </div>
+                </div>
+                <div class="teste 6">
+                    
+                    <div class="mainTexto">
+                        <img src="/src/img/Causas/habitat do cucabeludo.png" alt="grafico">
+                        <p class="text">
+                            À medida que o planeta se aquece, as zonas polares perdem a superfície branca, que reflete menos, o que produz um aumento na temperatura, 
+                            que por sua vez gera mais perda de gelo. Esse fenômeno é o que explica porque os polos estão se aquecendo de duas a três vezes mais que o 
+                            resto do planeta, diz Costa, do Instituto Antártico Argentino.
+                        </p>
+                    </div>
+                </div>
+            </article>
         </section>
+        <article class="scroll"></article>
     </main>
     <footer></footer>
 </body>
