@@ -1,31 +1,63 @@
-@media (max-width: 760px) {
+@media (max-width: 1580px) {
     body{
         width: 100vw;
         height: 90vh;
         main{
             section{
+                &.Layout{ 
+                    grid-template-columns: [sideArea] 20vw [mainArea] 80vw;
+                
+                }
                 .topicos{
-                    display: block;
-                    background-color: transparent;
+                    width: 20vw;
+                    height: 90vh;
+                    background-color: #000;
+
+                    .teste{
+                        grid-template-rows: 1fr;
+                    }
                     div{
                         position: relative;
                         p{
                             position: absolute;
-                            top: 10vh;
-                            left: 40px;
+                            bottom: 83vh;
+                            left: 34vw;
                             color: #000;
-                            &:hover{
+                            visibility: hidden;
+                            &.ativo {
                                 opacity: 1;
+                                visibility: visible;
                             }
                         }
                     }
+                }
+                .assunto{
+                    display: grid;
+                    justify-items: center;   
                 }
                 .teste{
                     display: grid;
                     grid-template-columns: 1fr;
                     place-items: center;
                 }
+
             }
+            .scroll{
+                display:  grid;
+                justify-items: center;
+                gap: 3px;
+                font-size: 20px;
+                position: relative;
+                left: 40vw;
+                bottom: 25vh;
+                
+                .line {
+                    width: 2px;
+                    height: 40px;
+                    background-color: black;
+                    border-radius: 2px;
+                }
+            }   
         }
 
     }

@@ -1,145 +1,165 @@
 @import url("responsividade.css");
 
-*{
+* {
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
 }
 
-body{
+body {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
+
     /*Fonte personalizada*/
     @font-face {
         font-family: "Arctic";
         src: url("Fontes/ArcticFF/Arctic.otf") format("truetype");
     }
-      
 
-    main{
+    /**/
+    header {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        position: relative;
+        top: -450px;
+
+        img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            object-fit: cover;
+            background: rgba(255, 255, 255, 0.5);
+
+            &:hover {
+                transform: scale(1.1);
+                box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+            }
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        li {
+            font-size: 30px;
+            font-weight: bold;
+
+            &.after::after {
+                content: '';
+                width: 2px;
+                height: 40px;
+                display: block;
+                position: relative;
+                top: -35px;
+                left: 160px;
+                background-color: aliceblue;
+            }
+
+            a {
+                color: white;
+            }
+        }
+
+    }
+
+    main {
+        width: 100vw;
+        height: 100vh;
+
         /*Tela*/
-        .cena{
+        .Layout {
             position: relative;
             width: 100%;
             height: 100%;
-        }
-
-        /*Coleção dos controladores*/
-        .topicos{
-            display: grid;
-            align-content: end;
-            height: 90vh;
-            gap: 20px;
-            width: max-content;
-            z-index: 10;
-            position: relative;
-            background-color: black;
-            padding: 0px 30px 10vh 30px;
-            border-radius: 0px 10px 10px 0px;
-        /*Cabeçalho*/
-            header{
-                display: grid;
-                grid-template-columns: repeat(2,1fr);
-                align-items: center;
-                position: relative;
-                top: -450px;
-                img{
-                    width: 120px;
-                    height: 120px;
-                    border-radius: 50%;
-                    transition: transform 0.3s ease, box-shadow 0.3s ease;
-                    object-fit: cover;
-                    background: rgba(255, 255, 255, 0.5);
-                    &:hover {
-                        transform: scale(1.1);
-                        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
-                        cursor: pointer;
-                    }                  
-                }
-                ul{
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr);
-                }
-                li{
-                    font-size: 30px;
-                    font-weight: bold;
-                    &.after::after{
-                        content: '';
-                        width: 2px;
-                        height: 40px;
-                        display: block;
-                        position: relative;
-                        top: -35px;
-                        left: 160px;
-                        background-color: aliceblue;
-                    }
-                    a{
-                        color: white;
-                    }
-                }
-
-            }
-
-        /*Estilos de Texto*/
-            p{
-                width: max-content;
-                display: grid;
-                grid-template-columns: [main-topico] auto [titulo] auto;
-                align-items: end;
-                justify-content: center;
-                gap: 20px;
-                font-size: 32px;
-                font-weight: bold;
-                letter-spacing: 2px;
-                color: white;
-                transition: .2s ease-in;
-                cursor: pointer;
-                visibility: hidden;
-                
-                & span{
-                    font-size: 24px;
-                }
-
-                &:hover,&.ativo{
-                    opacity: 0.5;
-                    visibility: visible;
-                }
-            }
-        }
-
-        /*Área principal de conteúdo*/
-        .teste {
-            width: 100vw;
-            height: 100vh;
-            position: absolute;
-            visibility: hidden;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-                
-            .mainTexto{
-                place-self: center;
-                position: relative;
-                left: 150px;
+            grid-template-rows: 1fr;
+        }
 
-                img{
-                    width: 70%;
-                    height: 70%;
-                    margin: 0px 0px 30px 0px;
-                }
-                p{
-                    width: 70%;
-                    height: 70%;
-                    font-size: 30px;
-                    text-align: justify;
-                }
+
+    }
+
+    /*Coleção dos controladores*/
+    .topicos {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 200px);
+        align-content: end;
+        height: 90vh;
+        gap: 20px;
+        position: relative;
+        background-color: black;
+        padding: 0px 10px 10vh 15px;
+        border-radius: 0px 10px 10px 0px;
+
+        .controles {
+            padding: 0px 40px 10px 0px;
+        }
+
+        /*Estilos de Texto*/
+        p {
+            width: max-content;
+            height: 60px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: end;
+            justify-content: center;
+            gap: 20px;
+            font-size: clamp(1em, 1em + 1vw, 3em);
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: white;
+            transition:  ease-in;
+            cursor: pointer;
+
+            & span {
+                font-size: 24px;
             }
 
-            &.visivel{
+            &:hover,
+            &.ativo {
+                opacity: 0.5;
                 visibility: visible;
             }
-        /*Númericos em uni-code 31 => 1, 32 => 2; e só colocar em .testes */
+        }
+    }
+
+    /*Área principal de conteúdo*/
+    .teste {
+        width: 50vw;
+        height: 100vh;
+        position: absolute;
+        visibility: hidden;
+        display: grid;
+
+        .mainTexto {
+            display: grid;
+            height: 90vh;
+            align-items: center;
+            justify-items: center;
+
+            img {
+                width: 70%;
+                height: 70%;
+                margin: 0px 0px 30px 0px;
+            }
+
+            p {
+                width: 70%;
+                height: 70%;
+                font-size: clamp(10px, 10px + 1em, 2em);
+                text-align: justify;
+            }
+        }
+
+        &.visivel {
+            visibility: visible;
         }
     }
 }
