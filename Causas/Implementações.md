@@ -13,6 +13,14 @@ Isso existe para demonstrar a situação atual da página de 'Causas', e o que a
     - [x] JS
 - [ ] Executar scripts diferentes dependendo do dispositivo
 
-## O que pode vir a ser implemenado?
+## Correções e novas features?
 
-Aqui não tem muito o que colocar. 
+-[ ] Quebra de Layout
+Descrição: Ao reduzir a tela o layout quebra. Relacionado a !Responsividade.
+
+![Quebra de Layout](image.png)
+ponto de critico 1580px
+
+Ideia de solução: aplicar um layou similar ou igual ao mobile, com diferença de script.
+
+![Resolução](image-1.png)
