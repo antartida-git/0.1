@@ -24,7 +24,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   object-fit: cover;
   z-index: -1;
@@ -147,22 +147,24 @@ a:visited {
 
 /* Menu Dropdown */
 .dropdown {
-  position: relative;
-  display: inline-block;
+  position: fixed;
+  top: 40px; /* Posição para o topo */
+  right: 10px; /* Alinhar no canto superior direito */
+  z-index: 1000;
 }
 
 .dropbtn {
-  font-family: "Playfair Display", serif;
-  font-size: 18px;
-  color: white;
-  padding: 8px 10px;
-  border-radius: 15px;
+  font-size: 100px; /* Ajuste conforme necessário */
+  padding: 5px; /* Remove o padding extra */
+  margin: 0; /* Remove margem */
+  height: auto; /* Ajusta a altura automaticamente */
+  width: auto; /* Ajusta a largura automaticamente */
   background-color: transparent;
+  border: none; /* Remove bordas */
   cursor: pointer;
-  outline: none;
-  border: none;
-  box-shadow: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .dropdown-content {
@@ -175,8 +177,8 @@ a:visited {
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   z-index: 1000;
-  top: 100%;
-  right: 0;
+  top: 100%; /* Para alinhar diretamente abaixo do botão dropdown */
+  right: 0; /* Manter alinhado à direita */
 }
 
 .dropbtn:focus {
@@ -199,13 +201,15 @@ a:visited {
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+  display: block; /* Exibe o conteúdo ao passar o mouse */
 }
 
 .menu-icon {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
+  object-fit: contain; /* Mantém a proporção da imagem */
   transition: transform 0.3s ease;
+  backface-visibility: hidden; /* Evita desfoque */
 }
 
 .dropbtn:hover .menu-icon {
@@ -238,7 +242,7 @@ a:visited {
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   position: absolute;
-  top: 800px;
+  top: 850px;
   left: 50%;
   transform: translateX(-50%);
   transition: all 0.3s ease;
@@ -253,7 +257,7 @@ a:visited {
 /* Botão de ajuda */
 #Botao-ajuda {
   position: absolute;
-  top: 1050px;
+  top: 1100px;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(34, 136, 204, 0.8);
@@ -267,7 +271,7 @@ a:visited {
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
-  z-index: 1002;
+  z-index: 1006;
 }
 
 #Botao-ajuda:hover {
@@ -278,4 +282,82 @@ a:visited {
 
 #Botao-ajuda:active {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Para telas menores que 768px (celulares) */
+@media (max-width: 768px) {
+  .dropdown {
+    top: 5; /* Definido como 0 para que o botão fique completamente no topo */
+    right: 15px;
+    left: auto;
+  }
+
+  .dropbtn {
+    font-size: 60px;
+  }
+
+  .dropdown-content {
+    min-width: 140px;
+    width: 160px;
+  }
+
+  .dropdown-content a {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .menu-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  #Botao-ajuda {
+    position: absolute;
+    top: 1100px;
+    left: 50%;
+  }
+}
+
+/* Para telas menores que 480px (telas muito pequenas) */
+@media (max-width: 480px) {
+  .dropdown {
+    top: 5; /* Definido como 0 para que o botão fique completamente no topo */
+    right: 15px;
+    left: auto;
+  }
+
+  .dropbtn {
+    font-size: 48px;
+  }
+
+  .dropdown-content {
+    min-width: 120px;
+    width: 140px;
+  }
+
+  .dropdown-content a {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .menu-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  #Botao-ajuda {
+    position: absolute;
+    top: 1200px;
+    left: 50%;
+  }
+}
+/* Para telas de 1920x1080 */
+@media (min-width: 1920px) and (max-width: 1920px) {
+  #Titulo-segun {
+    top: 1600px; /* Ajuste a posição vertical conforme necessário */
+  }
+
+  #Botao-ajuda {
+    top: 1800px; /* Ajuste a posição vertical conforme necessário */
+  }
 }
